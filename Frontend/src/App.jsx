@@ -8,6 +8,7 @@ import { useAuth } from "./context/AuthProvider";
 
 
 
+
 function App() {
   const [authUser, setAuthUser] = useAuth();
   console.log(authUser);
@@ -19,7 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route
             path="/course"
-            element={authUser ? <Courses /> : <Navigate to="/signup" />}
+            element={<Courses />}
           />
 
           <Route path="/signup" element={<Signup />} />
